@@ -1,0 +1,14 @@
+{
+  "name": "aula-01-introducao-ao-express",
+  "version": "1.0.0",
+  "description": "Conceitos iniciais do ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Baltazar de Souza Claudio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
