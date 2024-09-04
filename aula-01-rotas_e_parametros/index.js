@@ -20,11 +20,33 @@ app.listen(8080, (error) => {
 
 //Rota Perfil (com parametro)
 // :nome é parametro obrigatório
-app.get("/perfil/:nome", (req,res) => {
+// :nome? é um parametro opcional
+app.get("/perfil/:nome?", (req,res) => {
   const nome = req.params.nome
-  res.send(`Olá, ${nome}! Seja bem vindo!`)
+  //Verificando se 'nome' foi informado!  
+  if(nome){
+    res.send(`<h1>Olá, ${nome}! Seja bem vindo!<h1>`)
+  } else{
+    res.send(`<h2>Faça Login Para acessar seu perfil<h2>`)
+
+  }
 })
+
 //Rota de videos
-app.get("/video", (req,res) => {
-  res.send("<h1>Página de vídeos</h1>")
+//Parametros opcionais
+app.get("/video:playlist?/:video?", (req,res) => {
+  const playlist = req.params.playlist;
+  const video = req.params.video;
+  //Verificando se a playlist = true e video = undefined 
+if(playlist && video == undefined){
+    res.send(`<h2>Você está na Playlist ${playlist}. </h2>`)
+}
+
+if(playlist && video){
+  res.send(`<h2>Você está na playlist de ${playlist}</h2><br>
+    Reproduzindo o vídeo ${video}...`);
+  }else {
+    //Se não for informado nenhum parâmetro 
+    res.send("<h1>Página de vídeos</h1>");
+  }
 })
