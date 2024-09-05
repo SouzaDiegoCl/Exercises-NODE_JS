@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <% if (!playlist && !video) { %>
+        <% const playlistLista = ['Videos de Comédia','Vídeos de Terror' ] %>
+        <h1>Selecione uma playlist</h1>
+        <% playlistLista.forEach((playlistItem) => { %>
+            <p><a href="video/<%= playlistItem %>"><%= playlistItem %></a></p>
+        <% }) %>
+    <% } else if (playlist && !video) { %>
+        <%
+         let videoLista;
+         if(playlist == 'Videos de Comédia' ) {            
+                    videoLista = ['Comédia 1', 'Comédia 2', 'Comédia 3'];
+            }else if('Vídeos de Terror'){
+                videoLista = ['Terror 1', 'Terror 2', 'Terror 3'];
+            }else{
+                videoLista = ['Video Default 1', 'Video Default 2', 'Video Default 3'];
+            }                                    
+          %>
+        <h1>Playlist: <i><u><%= playlist %></u></i></h1>
+        <hr>
+        <h1>Esolha um vídeo:</h1>
+            <% videoLista.forEach((video)=>{%>
+                <p> <a href="/video/<%= playlist %>/<%= video %>"><%= video %> </a></p>
+            <% }) %>
+    <%  } else { %>
+        <h1>Playlist: <i><u><%= playlist %></u></i></h1>
+        <hr>
+        <h1>Vídeo: <i><u><%= video %></u></i></h1>
+        <% } %>
+         
+</body>
+</html>
