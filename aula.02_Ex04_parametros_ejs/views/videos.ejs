@@ -10,7 +10,7 @@
         <% const playlistLista = ['Videos de Comédia','Vídeos de Terror' ] %>
         <h1>Selecione uma playlist</h1>
         <% playlistLista.forEach((playlistItem) => { %>
-            <p><a href="video/<%= playlistItem %>"><%= playlistItem %></a></p>
+            <p><a href="videos/<%= playlistItem %>"><%= playlistItem %></a></p>
         <% }) %>
     <% } else if (playlist && !video) { %>
         <%
@@ -27,7 +27,7 @@
         <hr>
         <h1>Esolha um vídeo:</h1>
             <% videoLista.forEach((video)=>{%>
-                <p> <a href="/video/<%= playlist %>/<%= video %>"><%= video %> </a></p>
+                <p> <a href="/videos/<%= playlist %>/<%= video %>"><%= video %> </a></p>
             <% }) %>
     <%  } else { %>
         <h1>Playlist: <i><u><%= playlist %></u></i></h1>

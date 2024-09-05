@@ -43,11 +43,11 @@ app.get("/perfil/:nome?", (req, res) => {
 });
 //Rota de videos
 //Parametros opcionais
-app.get("/video/:playlist?/:video?", (req, res) => {
+app.get("/videos/:playlist?/:video?", (req, res) => {
   // const playlist = req.params.playlist
   const playlist = req.params.playlist;
   const video = req.params.video;
-  res.render("video", {
+  res.render("videos", {
     playlist: playlist,
     video: video,
   });
