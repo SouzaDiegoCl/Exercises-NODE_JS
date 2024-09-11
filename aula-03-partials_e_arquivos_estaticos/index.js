@@ -7,19 +7,22 @@ const app = express();
 //DEFININDO EJS como renderizador de páginas
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+//Definir a pasta dos arquivos estáticos: (public)
+app.use(express.static('public'));
 
 //Iniciando o servidor na porta 8080
 const port = 8080
 app.listen(port, (error) => {
   if (error) {
     console.log(`Ocorreu um erro: ${error}`);
-  } else {
+  } else {  
     console.log(`Servidor iniciado com sucesso: http://localhost:${port}}`);
   }
 })
+
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 //Rota de produtos
 app.get("/produtos/:produtoNome?", (req, res) => {
