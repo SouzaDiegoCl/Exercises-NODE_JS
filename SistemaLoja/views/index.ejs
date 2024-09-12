@@ -1,3 +1,32 @@
 <%- include ('partials/header.ejs') %>
-    <h1>HOME</h1>
-<%- include ('partials/footer.ejs') %>
+    <div id="main">
+        <h1>PaperStore</h1>
+        <hr >
+        <div id="mainCardWrapper">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/imgs/productCard.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Produtos</h5>
+                    <p class="card-text">Acesse a lista de Produtos</p>
+                    <a href="/produtos" class="btn btn-primary">Acessar</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/imgs/pedidoCard.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Pedidos</h5>
+                    <p class="card-text">Acesse a lista de Pedidos</p>
+                    <a href="/pedidos" class="btn btn-primary">Acessar</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/imgs/clienteCard.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Clientes</h5>
+                    <p class="card-text">Acesse a lista de Clientes</p>
+                    <a href="/clientes" class="btn btn-primary">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ('partials/footer.ejs') %>
