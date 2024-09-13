@@ -1,16 +1,20 @@
 <%- include ('partials/header.ejs') %>
-    <h1>PEDIDOS</h1>
-    <div id="mainCardWrapper">
-        <% pedidosLista.forEach(pedido=> { %>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <p class="card-text">
-                        <%= pedido.numPedido %></br>
-                            <%= pedido.valor %>
-                    </p>
+    <div id="pedidosContainer">
+        <h1 class="pageTitle">PEDIDOS</h1>
+        <div id="pedidosCardWrapper">
+            <% pedidosLista.forEach(pedido=> { %>
+                <div class="card" style="width: 15rem; height: 100%">
+                    <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-around;">
+                        <p class="card-text">
+                            <%= pedido.numPedido %><br>
+                            <hr>
+                        </p>
+                        <p class="card-text">
+                            R$<%= pedido.valor %>                             
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <% }) %>
+                <% }) %>
+        </div>
     </div>
     <%- include ('partials/footer.ejs') %>

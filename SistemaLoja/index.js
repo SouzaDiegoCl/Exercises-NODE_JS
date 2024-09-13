@@ -50,19 +50,27 @@ app.get("/produtos", (req, res) => {
     { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
     { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
     { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
+    { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
   ];
   res.render("produtos", {
     produtosLista: produtosLista,
   });
 });
+let pedidosLista = [
+  { numPedido: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error suscipit ab quaerat numquam excepturi fuga! Ut fugit quibus", valor: 1.0 },
+  { numPedido: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error suscipit ab quaerat numquam excepturi fuga! Ut fugit quibus", valor: 1.0 },
+  { numPedido: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error suscipit ab quaerat numquam excepturi fuga! Ut fugit quibus", valor: 1.0 },
+  { numPedido: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit error suscipit ab quaerat numquam excepturi fuga! Ut fugit quibus", valor: 1.0 },
+
+];
+
 
 app.get("/pedidos", (req, res) => {
-    const pedidosLista = [
-        { numPedido: "xxx", valor: 1.0},    
-        { numPedido: "xxx", valor: 1.0},
-        { numPedido: "xxx", valor: 1.0},
-      ];
+
   res.render("pedidos", {
     pedidosLista: pedidosLista,
   });
 });
+
+
+

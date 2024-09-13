@@ -10,9 +10,9 @@
   "author": "Diego Baltazar de Souza Claudio",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
-    "fa-icons": "^0.2.0",
     "nodemon": "^3.1.4"
   }
 }
