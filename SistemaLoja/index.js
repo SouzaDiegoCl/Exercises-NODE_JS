@@ -26,17 +26,17 @@ app.get("/clientes", (req, res) => {
     },
     {
       nome: "Pitucha Ferreira Baltazar",
-      cpf: "xxx.xxx.xxx-xx",
+      cpf: "902.821.334-11",
       endereco: "Cananéia/SP",
     },
     {
       nome: "Lucke Ferreira Baltazar",
-      cpf: "xxx.xxx.xxx-xx",
+      cpf: "123.444.665-99",
       endereco: "Xique-Xique/BA",
     },
     {
       nome: "Cacau Ferreira Baltazar",
-      cpf: "xxx.xxx.xxx-xx",
+      cpf: "222.321.654-98",
       endereco: "Los Angeles/CA",
     },
   ];
@@ -47,11 +47,13 @@ app.get("/clientes", (req, res) => {
 
 app.get("/produtos", (req, res) => {
   const produtosLista = [
-    { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
-    { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
-    { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
-    { nomeProduto: "xxx", preco: "xxx", categoria: "xxx" },
+    { nomeProduto: "Lápis", preco: "10", categoria: "Escritório" },
+    { nomeProduto: "Caneta", preco: "12,99", categoria: "Escritório" },
+    { nomeProduto: "Cartolina", preco: "20", categoria: " Arte e Artesanato" },
+    { nomeProduto: "Calculadora", preco: "16,50", categoria: "Material Escolar" },
+    { nomeProduto: "Agenda", preco: "19", categoria: "Material Escolar" },
   ];
+  
   res.render("produtos", {
     produtosLista: produtosLista,
   });
