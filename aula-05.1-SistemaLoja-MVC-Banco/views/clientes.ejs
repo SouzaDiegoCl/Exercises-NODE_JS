@@ -1,6 +1,31 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Cadastrar Clientes</h1>
+        </div>
+        <div class="card-body">
+            <form action="/clientes/new" method="post">
+                <label for="">Nome do Cliente:</label>
+                <input class="form-control" type="text" name="nome" id="nomeInput" placeholder="Insira o nome do cliente" required>
+
+                <label for="">CPF:</label>
+                <input class="form-control" type="text" name="cpf" id="cpf" placeholder="Insira o cpf do cliente" required>
+
+                <label for="">Endereço:</label>
+                <input class="form-control" type="text" name="endereco" id="cpf" placeholder="Insira o endereço do cliente" required>
+
+                <br>
+
+                <input type="submit" value="cadastrar" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+
+</div>
+
         <div class="container">
             <div class="card">
                 <div class="card-header">
@@ -14,6 +39,7 @@
                                 <th>Nome:</th>
                                 <th>CPF:</th>
                                 <th>Endereço:</th>
+                                <th colspan="2">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,6 +54,12 @@
                                     </td>
                                     <td>
                                         <%= cliente.endereco %>
+                                    </td>
+                                    <td>
+                                        <a  style="color: orange;" href="#">Editar</a>                                        
+                                    </td>
+                                    <td>
+                                        <a  style="color: orange;" href="/clientes/delete/<%= cliente.id %>">Deletar</a>                                        
                                     </td>
                                 </tr>
                                 <% }) %>

@@ -9,6 +9,9 @@ import ClientesController from "./controllers/ClientesController.js";
 import ProdutosController from "./controllers/ProdutosController.js";
 import PedidosController from "./controllers/PedidosController.js";
 
+// Permitindo cpturar dados vindo de formulários
+app.use(express.urlencoded({extended: false}));
+
 // Realizando a conexão com o banco de dados
 connection
   .authenticate()
