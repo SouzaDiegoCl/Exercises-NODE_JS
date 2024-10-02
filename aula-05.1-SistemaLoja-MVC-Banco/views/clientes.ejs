@@ -56,10 +56,10 @@
                                         <%= cliente.endereco %>
                                     </td>
                                     <td>
-                                        <a  style="color: orange;" href="#">Editar</a>                                        
+                                        <a  style="color: orange;" href="/clientes/edit/<%= cliente.id %>">Editar</a>                                        
                                     </td>
                                     <td>
-                                        <a  style="color: orange;" href="/clientes/delete/<%= cliente.id %>">Deletar</a>                                        
+                                        <a  style="color: red;" href="/clientes/delete/<%= cliente.id %>">Deletar</a>                                        
                                     </td>
                                 </tr>
                                 <% }) %>
