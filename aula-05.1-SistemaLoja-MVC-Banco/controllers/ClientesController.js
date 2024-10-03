@@ -79,7 +79,7 @@ router.post("/clientes/update/", (req, res) => {
       res.redirect("/clientes");
     })
     .catch((error) => {
-      console.log(error);   
+      console.log(error);
     });
 });
 
