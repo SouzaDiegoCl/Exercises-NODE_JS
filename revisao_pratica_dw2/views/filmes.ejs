@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container">
+        <h1>Cadastrar novo filme:</h1>
+        <form action="/filme/new" method="post">
+            <label>Titulo:</label>
+            <input type="text" name="titulo" required class="form-control">
+            <label>Gênero:</label>
+            <input type="text" name="genero" required>
+            <label>Duração:</label>
+            <input type="text" name="duracao" required>
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Limpar">
+        </form>
+        <br>
+        <hr>
+        <br>
+        <table>
+            <thead>
+                <th style="width: 150px; text-align: left;">Título</th>
+                <th style="width: 150px; text-align: left;">Gênero</th>
+                <th style="width: 150px; text-align: left;">Duração</th>
+                <th style="width: 150px; text-align: left;">Ações</th>
+            </thead>
+            <tbody>
+                <% filmes.forEach( (filme)=> { %>
+                    <tr>
+                        <td>
+                            <%= filme.titulo %>
+                        </td>
+                        <td>
+                            <%= filme.genero %>
+                        </td>
+                        <td>
+                            <%= filme.duracao %>
+                        </td>
+                        <td>
+                            <a href="/filmes/delete/<%= filme.id %>" 
+                                onclick="return confirm('Deseja realemente excluir o filme <%= filme.titulo %>')">
+                                Excluir</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+
+    <%- include('partials/footer.ejs') %>
