@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+    <%- include('partials/navbar.ejs') %>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Editar Produto</h1>
+                    <hr>
+                </div>
+                <div class="card-body">
+                    <form action="/produto/update/" method="post">                
+                        <label >Produto:</label>
+                        <input class="form-control" type="text" name="nome" id="produtoNomeInput" value="<%= produto.nome %>" required>
+                        <label >Preço</label>
+                        <input class="form-control" type="text" name="preco" id="precoInput" value="<%= produto.preco %>" required>
+                        <label >Categoria do produto:</label>
+                        <input class="form-control" type="text" name="categoria" id="enderecoInput" value="<%= produto.categoria %>" required>
+                        <input type="hidden" name="id" id="idInput" value="<%= produto.id %>"  >
+                        <br>
+                        <input type="submit" class="btn btn-warning" value="alterar">
+                    </form>
+                    <hr>
+                </div>
+            </div>
+        </div>
+<%- include('partials/footer.ejs') %>
