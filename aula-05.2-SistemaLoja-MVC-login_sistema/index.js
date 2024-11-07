@@ -24,7 +24,7 @@ connection
   });
 
 // Criando o banco de dados se ele não existir
-connection.query(`CREATE DATABASE IF NOT EXISTS loja;`).then(() => {
+connection.query(`CREATE DATABASE IF NOT EXISTS galeria;`).then(() => {
   console.log("O banco de dados está criado.");
 }).catch((error) => {
     console.log(error)

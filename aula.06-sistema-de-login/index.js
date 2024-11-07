@@ -14,6 +14,7 @@ import UsersController from "./controllers/UsersController.js";
 //Flash
 import flash from "express-flash";
 app.use(flash());
+
 //Importando o Middleware Auth
 import Auth from "./middleware/Auth.js";
 //Importando o gerador de sessoes do express

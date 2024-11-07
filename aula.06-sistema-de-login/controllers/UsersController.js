@@ -16,7 +16,6 @@ router.get("/cadastro", (req, res) => {
   res.render("cadastro", {
     loggedOut: true,
     messages: req.flash()
-
   });
 });
 

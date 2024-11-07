@@ -4,6 +4,7 @@ const router = express.Router();
 import Produto from "../models/Produto.js";
 //Importando o Middleware Auth
 import Auth from "../middleware/Auth.js"
+
 // ROTA PRODUTOS
 router.get("/produtos", Auth, (req, res) => {
   Produto.findAll()
