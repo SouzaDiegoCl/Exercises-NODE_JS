@@ -56,9 +56,9 @@ router.get("/produto/edit/:id", (req, res) => {
         produto: produto,
       });
     })
-    .catch((error) => {
-      console.log(error);
-    });
+      .catch((error) => {
+        console.log(error);
+      });
 });
 
 //Rota de alteração

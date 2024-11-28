@@ -12,5 +12,4 @@ const connection = new Sequelize({
     timezone: '-03:00'
 })
 
-
 export default connection;
